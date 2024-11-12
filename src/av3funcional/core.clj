@@ -46,12 +46,12 @@
                                           "x-rapidapi-host" "betano.p.rapidapi.com"}
                                 :query-params {"tournamentId" "325"}})
           data (json/parse-string (:body response) true)]
-      ;; Exibindo informações do torneio
+
       (println "Informações do Torneio:")
       (println "Categoria:" (:categoryName data))
       (println "Nome:" (:name data))
       (println "ID do Torneio:" (:tournamentId data))
-      ;; Exibindo eventos
+
       (println "\nEventos:")
       (doseq [event (vals (:events data))]
         (println "-------------------")
