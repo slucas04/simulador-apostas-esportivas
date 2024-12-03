@@ -2,7 +2,10 @@
   (:require [clj-http.client :as client]
             [cheshire.core :as json]
             [clojure.java.io :as io]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [environ.core :refer [env]]))
+
+(def api-key (:api-key env))
 
 ;; Função para carregar o saldo do arquivo
 (defn carregar-saldo []
@@ -67,7 +70,7 @@
 ;; Buscar eventos de futebol
 (defn buscar-eventos [url params]
   (try
-    (let [response (client/get url {:headers {:x-rapidapi-key "de8ef9fc9dmsh8fa651ebe9f6ad7p1e221bjsn9bc7325ca0bb"
+    (let [response (client/get url {:headers {:x-rapidapi-key api-key
                                               :x-rapidapi-host "betano.p.rapidapi.com"}
                                     :query-params params})
           data (json/parse-string (:body response) true)]
@@ -100,7 +103,7 @@
 ;; Buscar odds de um evento
 (defn buscar-odds [evento-id]
   (let [url "https://betano.p.rapidapi.com/odds_betano"
-        headers {:x-rapidapi-key "de8ef9fc9dmsh8fa651ebe9f6ad7p1e221bjsn9bc7325ca0bb"
+        headers {:x-rapidapi-key api-key
                  :x-rapidapi-host "betano.p.rapidapi.com"}
         params {:eventId evento-id
                 :oddsFormat "decimal"
