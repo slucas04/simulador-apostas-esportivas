@@ -67,6 +67,8 @@ O sistema é dividido em:
 1. Abra o arquivo index.html localizado na pasta front/ no navegador.
 2. Garanta que o servidor back-end está rodando.
 
+---
+
    ### **🌐 Endpoints da API**
 
 | **Método** | **Endpoint**              | **Descrição**                            |
