@@ -1,4 +1,4 @@
-# 🏟️ Simulador de Apostas Esportivas  
+# ⚽ Simulador de Apostas Esportivas  
 
 ## 📜 Descrição  
 O **Simulador de Apostas Esportivas** é uma aplicação web que permite ao usuário **simular apostas** em eventos esportivos.  
