@@ -1,44 +1,100 @@
-# av3funcional
+# 🏟️ Simulador de Apostas Esportivas  
 
-FIXME: description
+## 📜 Descrição  
+O **Simulador de Apostas Esportivas** é uma aplicação web que permite ao usuário **simular apostas** em eventos esportivos.  
+Com funcionalidades como:  
+- Consulta de saldo 💰  
+- Depósitos e saques 🏧  
+- Busca de eventos esportivos 🏆  
+- Simulação de apostas 🎰  
 
-## Installation
+O sistema é dividido em:  
+- **Front-end**: Interface visual usando HTML, CSS (Bootstrap) e JavaScript.  
+- **Back-end**: API robusta construída em **Clojure** com integração à **API Betano** para obter eventos e odds.  
 
-Download from http://example.com/FIXME.
+---  
 
-## Usage
+## ✨ Funcionalidades  
 
-FIXME: explanation
+### **Front-end**  
+✅ Exibição do saldo atual do usuário.  
+✅ Realização de **depósitos** e **saques**.  
+✅ Consulta de **eventos esportivos** por torneios.  
+✅ Busca de odds (probabilidades) para cada evento.  
+✅ Simulação de **apostas**, escolhendo evento, mercado e resultado.  
+✅ Listagem de **apostas realizadas**.  
 
-    $ java -jar av3funcional-0.1.0-standalone.jar [args]
+### **Back-end**  
+- 🔧 Gestão financeira: depósitos, saques e saldo do usuário.  
+- ⚽ Busca de eventos esportivos e odds usando a **API Betano**.  
+- 📄 Registro e listagem das apostas realizadas.  
 
-## Options
+---  
 
-FIXME: listing of options this app accepts.
+## 🛠️ Tecnologias Utilizadas  
 
-## Examples
+### **Front-end**  
+- **HTML5** e **CSS3**: Estruturação e estilização.  
+- **Bootstrap 5**: Design moderno e responsivo.  
+- **JavaScript**: Dinamismo e integração com a API.  
 
-...
+### **Back-end**  
+- **Clojure**: Linguagem funcional para o servidor.  
+- **Ring**: Servidor HTTP para Clojure.  
+- **Compojure**: Roteamento da API.  
+- **clj-http**: Requisições HTTP para API externas.  
+- **Cheshire**: Manipulação de JSON.  
+- **API Betano**: Fonte de dados para eventos e odds.  
 
-### Bugs
+---  
 
-...
+## 🚀 Como Executar  
 
-### Any Other Sections
-### That You Think
-### Might be Useful
+### **Pré-requisitos**  
+1. Obtenha uma **API Key** da Betano.  
+2. Instale **Java 8+**.  
+3. Instale o [Leiningen](https://leiningen.org/) para gerenciar o back-end.  
 
-## License
+### **Passos**  
 
-Copyright © 2024 FIXME
+#### **Back-end**  
+1. Navegue até a pasta `back/`.  
+2. Inicie o servidor com:  
+   ```bash
+   lein run
+3. A API estará disponível em [http://localhost:8081.]
 
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
+#### **Front-end**
+1. Abra o arquivo index.html localizado na pasta front/ no navegador.
+2. Garanta que o servidor back-end está rodando.
 
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+   ### **🌐 Endpoints da API**
+
+| **Método** | **Endpoint**              | **Descrição**                            |
+|------------|---------------------------|------------------------------------------|
+| GET        | `/saldo`                  | Retorna o saldo atual do usuário.        |
+| POST       | `/depositar`              | Realiza um depósito no saldo.            |
+| PUT        | `/sacar`                  | Realiza um saque do saldo.               |
+| POST       | `/apostar`                | Registra uma aposta simulada.            |
+| GET        | `/consultar-apostas`      | Lista todas as apostas realizadas.       |
+| GET        | `/eventos/:torneio-id`    | Retorna eventos de um torneio.           |
+| GET        | `/odds/:evento-id`        | Retorna odds de um evento esportivo.     |
+
+---
+
+### **📂 Estrutura de Pastas**
+
+```bash
+simulador-apostas/  
+├── front/               # Código do front-end  
+│   ├── index.html       # Interface principal  
+│   └── assets/          # Estilos, fontes e scripts  
+├── back/                # Código do back-end  
+│   ├── src/             # Código-fonte em Clojure  
+│   └── project.clj      # Configurações do projeto Leiningen  
+└── README.md            # Documentação do projeto
+```
+
+### **📂📄 Licença**
+Este projeto é de uso livre para fins educativos.
+Sinta-se à vontade para usar e modificar como preferir.
