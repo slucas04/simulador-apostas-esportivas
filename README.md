@@ -96,6 +96,8 @@ simulador-apostas/
 └── README.md            # Documentação do projeto
 ```
 
+---
+
 ### **📂📄 Licença**
 Este projeto é de uso livre para fins educativos.
 Sinta-se à vontade para usar e modificar como preferir.
