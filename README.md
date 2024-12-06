@@ -3,9 +3,8 @@
 ## 📜 Descrição  
 O **Simulador de Apostas Esportivas** é uma aplicação web que permite ao usuário **simular apostas** em eventos esportivos.  
 Com funcionalidades como:  
-- Consulta de saldo 💰  
-- Depósitos e saques 🏧  
-- Busca de eventos esportivos 🏆  
+- Gerenciamento de saldo 💰  
+- Busca de eventos esportivos via API [Betano] 🏆  
 - Simulação de apostas 🎰  
 
 O sistema é dividido em:  
