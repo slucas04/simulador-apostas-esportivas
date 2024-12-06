@@ -4,7 +4,7 @@
 O **Simulador de Apostas Esportivas** é uma aplicação web que permite ao usuário **simular apostas** em eventos esportivos.  
 Com funcionalidades como:  
 - Gerenciamento de saldo 💰  
-- Busca de eventos esportivos via API [Betano] 🏆  
+- Busca de eventos esportivos via **API Betano** 🏆  
 - Simulação de apostas 🎰  
 
 O sistema é dividido em:  
@@ -61,7 +61,7 @@ O sistema é dividido em:
 2. Inicie o servidor com:  
    ```bash
    lein run
-3. A API estará disponível em [http://localhost:8081.]
+3. A API estará disponível em **http://localhost:8081.**
 
 #### **Front-end**
 1. Abra o arquivo index.html localizado na pasta front/ no navegador.
